@@ -1,12 +1,15 @@
-package practice.src.day12_okulProje;
+package practice.src.okulProjesi;
 
-public class Ogretmen extends Kisi{
+public class Ogretmen extends Kisi {
 
-    private String bolum;
-    private String sicilNo;
 
-    public Ogretmen(){
-    }
+
+   private String bolum;
+   private String sicilNo;
+   public Ogretmen(){
+
+   }
+
 
     public Ogretmen(String adSoyad, String kimlikNo, int yas, String bolum, String sicilNo) {
         super(adSoyad, kimlikNo, yas);
@@ -18,12 +21,12 @@ public class Ogretmen extends Kisi{
         return bolum;
     }
 
-    public String getSicilNo() {
-        return sicilNo;
-    }
-
     public void setBolum(String bolum) {
         this.bolum = bolum;
+    }
+
+    public String getSicilNo() {
+        return sicilNo;
     }
 
     public void setSicilNo(String sicilNo) {
@@ -35,6 +38,6 @@ public class Ogretmen extends Kisi{
         return "Ogretmen{" +
                 "bolum='" + bolum + '\'' +
                 ", sicilNo='" + sicilNo + '\'' +
-                '}'+super.toString();
+                '}';
     }
 }
