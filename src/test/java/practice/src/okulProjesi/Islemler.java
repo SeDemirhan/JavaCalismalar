@@ -101,6 +101,7 @@ public class Islemler {
                 for (Kisi k : OgrenciList) {
                     if (k.getKimlikNo().equalsIgnoreCase(silinecekKimlikNo)) {
                         System.out.println("silinen ogrenci : " + k.getAdSoyad());
+                        OgrenciList.remove(k);
                     }
                     flag = false;
 
@@ -114,6 +115,7 @@ public class Islemler {
                 for (Kisi k : OgretmenList) {
                     if (k.getKimlikNo().equalsIgnoreCase(arananKimlikNo)) {
                         System.out.println("silinen ogrenci : " + k.getAdSoyad());
+                        OgrenciList.remove(k);
                     }
                     flag = false;
 
@@ -131,6 +133,7 @@ public class Islemler {
 
             if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
                 System.out.println(OgrenciList);
+
             } else {
                 for (Kisi k : OgretmenList) {
                     System.out.println(k.toString());
@@ -149,7 +152,7 @@ public class Islemler {
                 scan.nextLine();//dummy
                 System.out.print("aradiniz ogrenci kimlik no giriniz : ");
                 String arananKimlikNo = scan.nextLine();
-
+                scan.nextLine();
                 for (Kisi k : OgrenciList) {
                     if (k.getKimlikNo().equalsIgnoreCase(arananKimlikNo)) {
                         System.out.println("aradiginiz ogrenci : " + k.getAdSoyad());
@@ -165,7 +168,7 @@ public class Islemler {
                 String arananKimlikNo = scan.next();
                 for (Kisi k : OgretmenList) {
                     if (k.getKimlikNo().equalsIgnoreCase(arananKimlikNo)) {
-                        System.out.println("aradıgınız ogrenci : " + k.getAdSoyad());
+                        System.out.println("aradıgınız ogretmen : " + k.getAdSoyad());
                     }
                     flag = false;
 
